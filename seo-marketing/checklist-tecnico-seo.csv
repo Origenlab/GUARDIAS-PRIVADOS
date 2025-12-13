@@ -1,0 +1,31 @@
+Area,Elemento,Estado Actual,Accion Requerida,Prioridad,Semana Implementacion,Responsable,Verificacion
+Basico,Title tags,Vacio (sin titulo),Implementar title unico en cada pagina segun guia,CRITICA,1,Desarrollo,Google Search Console > Cobertura
+Basico,Meta descriptions,Vacio,Implementar meta description unica 150-160 caracteres,CRITICA,1,Desarrollo,View source o SEO extension
+Basico,H1 unico por pagina,No existe H1,Crear estructura H1 > H2 > H3 semantica,CRITICA,1,Desarrollo,Screaming Frog o manual
+Basico,Lang attribute,lang vacio,Cambiar a lang=es-MX,ALTA,1,Desarrollo,View source
+Basico,Canonical tags,No implementado,Agregar rel=canonical en head de cada pagina,ALTA,2,Desarrollo,View source
+Basico,URL structure,Solo index.html,Crear estructura de carpetas segun sitemap,CRITICA,1-2,Desarrollo,Navegacion manual
+Tecnico,Sitemap.xml,No existe,Crear sitemap.xml y subir a GSC,CRITICA,1,Desarrollo,guardias-privados.com/sitemap.xml
+Tecnico,Robots.txt,Basico,Optimizar con referencias a sitemap,ALTA,1,Desarrollo,guardias-privados.com/robots.txt
+Tecnico,Schema LocalBusiness,No existe,Implementar JSON-LD en todas las paginas,ALTA,2,Desarrollo,Google Rich Results Test
+Tecnico,Schema Service,No existe,Implementar en paginas de servicios,ALTA,2,Desarrollo,Google Rich Results Test
+Tecnico,Schema FAQPage,No existe,Implementar en pagina FAQ y servicios,MEDIA,3,Desarrollo,Google Rich Results Test
+Tecnico,Schema BreadcrumbList,No existe,Implementar breadcrumbs con schema,MEDIA,4,Desarrollo,Google Rich Results Test
+Tecnico,Open Graph tags,Vacios,Completar og:title og:description og:image,ALTA,2,Desarrollo,Facebook Sharing Debugger
+Tecnico,Twitter Cards,No existe,Agregar twitter:card twitter:title etc,MEDIA,3,Desarrollo,Twitter Card Validator
+Performance,Core Web Vitals LCP,Sin medir,Medir y optimizar < 2.5s,ALTA,3-4,Desarrollo,PageSpeed Insights
+Performance,Core Web Vitals FID,Sin medir,Medir y optimizar < 100ms,ALTA,3-4,Desarrollo,PageSpeed Insights
+Performance,Core Web Vitals CLS,Sin medir,Medir y optimizar < 0.1,ALTA,3-4,Desarrollo,PageSpeed Insights
+Performance,Compresion imagenes,N/A,Usar WebP formato y comprimir,MEDIA,3,Desarrollo,PageSpeed Insights
+Performance,Lazy loading,No implementado,Agregar loading=lazy a imagenes below fold,MEDIA,3,Desarrollo,View source
+Performance,Minificacion CSS/JS,Webpack configurado,Verificar bundle production,MEDIA,2,Desarrollo,Network tab DevTools
+Mobile,Responsive design,Basico boilerplate,Verificar y optimizar mobile-first,ALTA,2,Desarrollo,Mobile-Friendly Test Google
+Mobile,Viewport configurado,Si existe,Verificar meta viewport correcta,OK,1,Desarrollo,View source
+Mobile,Touch targets,Sin verificar,Botones minimo 48x48px,MEDIA,3,Desarrollo,Lighthouse audit
+Seguridad,HTTPS,Si GitHub Pages,Verificar certificado SSL valido,OK,1,Desarrollo,Browser padlock
+Seguridad,Mixed content,Sin verificar,Asegurar todos recursos via HTTPS,ALTA,2,Desarrollo,Console DevTools
+Indexacion,Google Search Console,No configurado,Verificar propiedad y configurar,CRITICA,1,Marketing,GSC dashboard
+Indexacion,Google Analytics 4,No configurado,Instalar GA4 con eventos de conversion,CRITICA,1,Marketing,GA4 Realtime
+Indexacion,Bing Webmaster Tools,No configurado,Verificar y enviar sitemap,MEDIA,2,Marketing,Bing dashboard
+Local,Google Business Profile,No existe,Crear y verificar ficha completa,CRITICA,1,Marketing,GBP dashboard
+Local,NAP consistencia,N/A,Asegurar Name Address Phone identicos everywhere,ALTA,2,Marketing,Revision manual

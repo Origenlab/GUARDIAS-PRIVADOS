@@ -1,0 +1,157 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://guardias-privados.com/#organization",
+  "name": "GUPRI Seguridad Privada",
+  "alternateName": "GUPRI",
+  "description": "Empresa lider en seguridad privada para condominios y guardias residenciales en Mexico. Servicios de vigilancia 24/7, control de acceso y proteccion integral.",
+  "url": "https://guardias-privados.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://guardias-privados.com/img/logo-gupri.png",
+    "width": 300,
+    "height": 100
+  },
+  "image": [
+    "https://guardias-privados.com/img/gupri-oficina.jpg",
+    "https://guardias-privados.com/img/guardias-condominios.jpg",
+    "https://guardias-privados.com/img/control-acceso.jpg"
+  ],
+  "telephone": "+52-55-XXXX-XXXX",
+  "email": "contacto@guardias-privados.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Direccion de la oficina]",
+    "addressLocality": "Ciudad de Mexico",
+    "addressRegion": "CDMX",
+    "postalCode": "[Codigo Postal]",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "[LATITUD]",
+    "longitude": "[LONGITUD]"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Ciudad de Mexico"
+    },
+    {
+      "@type": "State",
+      "name": "Estado de Mexico"
+    },
+    {
+      "@type": "City",
+      "name": "Guadalajara"
+    },
+    {
+      "@type": "City",
+      "name": "Monterrey"
+    },
+    {
+      "@type": "City",
+      "name": "Queretaro"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "MXN",
+  "paymentAccepted": "Efectivo, Transferencia Bancaria, Tarjeta de Credito",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Seguridad Privada",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Seguridad Privada para Condominios",
+          "description": "Servicio integral de vigilancia y proteccion para condominios con guardias capacitados, control de acceso y monitoreo 24/7.",
+          "provider": {
+            "@id": "https://guardias-privados.com/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Mexico"
+          },
+          "serviceType": "Seguridad Privada"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Guardias Residenciales",
+          "description": "Guardias de seguridad profesionales para fraccionamientos, residenciales privados y calles cerradas.",
+          "provider": {
+            "@id": "https://guardias-privados.com/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Mexico"
+          },
+          "serviceType": "Vigilancia Residencial"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Control de Acceso",
+          "description": "Sistemas de control de acceso vehicular y peatonal con tecnologia biometrica y reconocimiento de placas.",
+          "provider": {
+            "@id": "https://guardias-privados.com/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Mexico"
+          },
+          "serviceType": "Control de Acceso"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vigilancia 24 Horas",
+          "description": "Servicio de vigilancia continua las 24 horas del dia, los 7 dias de la semana, con rondines programados.",
+          "provider": {
+            "@id": "https://guardias-privados.com/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Mexico"
+          },
+          "serviceType": "Vigilancia 24/7"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/GUPRIseguridad",
+    "https://www.linkedin.com/company/gupri-seguridad",
+    "https://www.instagram.com/gupri_seguridad"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "0",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": []
+}

@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cuanto cuesta contratar seguridad privada para un condominio en Mexico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El costo de seguridad privada para condominios en Mexico varia entre $30,000 y $42,000 pesos mensuales antes de IVA para un servicio 24x24, dependiendo de la empresa y el nivel de cumplimiento legal. Factores como el numero de accesos, tamano del condominio y servicios adicionales (CCTV, control de acceso) pueden modificar este precio. En GUPRI ofrecemos cotizaciones personalizadas sin compromiso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que incluye el servicio de guardias para condominios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un servicio integral de guardias para condominios incluye: vigilancia presencial 24/7, control de acceso vehicular y peatonal, registro de visitantes, rondines programados en areas comunes, supervision de camaras de seguridad, atencion de emergencias, elaboracion de bitacoras diarias y coordinacion con servicios de emergencia. En GUPRI todos nuestros guardias estan capacitados y certificados ante la Secretaria de Seguridad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como verifico que una empresa de seguridad privada esta certificada en Mexico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para verificar una empresa de seguridad en Mexico, consulta el registro REPSE (Registro de Empresas de Servicios Especializados) en la plataforma del IMSS, verifica su autorizacion ante la Direccion General de Seguridad Privada, solicita copia de su registro ante STPS e IMSS, y confirma que cuenten con seguros y fianzas vigentes. Contratar empresas no acreditadas puede resultar en multas de hasta 542,850 pesos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cuantos guardias necesita mi condominio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El numero de guardias depende de varios factores: numero de accesos (vehiculares y peatonales), cantidad de unidades habitacionales, extension del area comun, nivel de riesgo de la zona y horarios de mayor afluencia. Como referencia general: condominios pequenos (menos de 50 unidades) requieren 2-3 guardias por turno; medianos (50-150 unidades) necesitan 3-5 guardias; grandes (mas de 150 unidades) pueden requerir 6 o mas. Recomendamos una evaluacion de riesgos gratuita para determinar el numero optimo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que es el registro REPSE y por que es importante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El REPSE (Registro de Prestadoras de Servicios Especializados u Obras Especializadas) es un registro obligatorio ante la STPS para empresas que ofrecen servicios de seguridad privada en Mexico. Es importante porque: garantiza que la empresa cumple con obligaciones fiscales y laborales, protege a los condominios de responsabilidades legales, asegura que los guardias tienen prestaciones de ley, y evita multas que pueden superar los 500,000 pesos. Siempre solicita el numero de registro REPSE antes de contratar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ofrecen servicio de vigilancia 24 horas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si, en GUPRI ofrecemos servicio de vigilancia las 24 horas del dia, los 365 dias del ano. Manejamos esquemas 24x24 (un guardia cubre las 24 horas) o turnos 12x12 segun las necesidades de cada condominio. Todos los turnos incluyen supervision remota, rondines programados y comunicacion constante con nuestra central de monitoreo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que protocolos de emergencia manejan sus guardias?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestros guardias estan capacitados en protocolos para: intento de robo o intrusion, incendios y evacuacion, emergencias medicas (primeros auxilios basicos), sismos, amenazas de bomba, y control de disturbios. Cada condominio recibe un manual de protocolos personalizado y realizamos simulacros periodicos. Ademas, mantenemos comunicacion directa con servicios de emergencia 911 y respuesta policial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pueden trabajar con el sistema de CCTV existente de mi condominio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si, nuestros guardias pueden operar y monitorear sistemas de CCTV existentes de cualquier marca. Ademas, ofrecemos servicios de actualizacion e instalacion de sistemas de videovigilancia si el condominio lo requiere. Tambien podemos integrar el monitoreo de camaras con nuestro centro de control para supervision remota adicional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como es el proceso de contratacion con GUPRI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El proceso de contratacion es sencillo: 1) Contactanos para una cotizacion gratuita, 2) Realizamos una visita de evaluacion de riesgos sin costo, 3) Presentamos propuesta personalizada con opciones de servicio, 4) Una vez aprobada, firmamos contrato y entregamos documentacion legal, 5) Asignamos personal capacitado y uniformado, 6) Iniciamos operaciones con periodo de supervision intensiva. Todo el proceso toma aproximadamente 5-7 dias habiles desde la aprobacion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que diferencia a GUPRI de otras empresas de seguridad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GUPRI se distingue por: especializacion exclusiva en condominios y residenciales (no somos una empresa generalista), guardias con capacitacion continua y certificaciones vigentes, supervision constante con tecnologia de rastreo de rondines, transparencia total en cumplimiento legal (REPSE, IMSS, STPS), respuesta garantizada en menos de 15 minutos ante incidentes, y un modelo de servicio enfocado en la satisfaccion de los residentes, no solo de la administracion."
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# robots.txt optimizado para GUPRI - guardias-privados.com
+# https://www.robotstxt.org/
+
+# Reglas generales para todos los bots
+User-agent: *
+Allow: /
+
+# Bloquear archivos internos que no deben indexarse
+Disallow: /js/vendor/
+Disallow: /*.json$
+Disallow: /webpack.*
+
+# Permitir archivos importantes
+Allow: /sitemap.xml
+Allow: /site.webmanifest
+
+# Referencia al sitemap
+Sitemap: https://guardias-privados.com/sitemap.xml
+
+# Reglas especificas para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Reglas para Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.webp$
+
+# Reglas para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Bloquear bots de scraping conocidos (opcional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Host preferido
+Host: https://guardias-privados.com

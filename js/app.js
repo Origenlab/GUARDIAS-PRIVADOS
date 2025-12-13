@@ -302,6 +302,128 @@
     }
 
     // ===================================
+    // Formulario de contacto WhatsApp
+    // ===================================
+    function initContactForm() {
+        const contactForm = document.getElementById('contact-form');
+        if (!contactForm) return;
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Obtener campos
+            const nombre = contactForm.querySelector('#contact-nombre');
+            const telefono = contactForm.querySelector('#contact-telefono');
+            const email = contactForm.querySelector('#contact-email');
+            const asunto = contactForm.querySelector('#contact-asunto');
+            const mensaje = contactForm.querySelector('#contact-mensaje');
+
+            // Limpiar errores previos
+            clearContactErrors();
+
+            // Validar
+            let isValid = true;
+
+            if (!nombre.value.trim()) {
+                showContactError(nombre, 'Por favor ingresa tu nombre');
+                isValid = false;
+            }
+
+            if (!telefono.value.trim()) {
+                showContactError(telefono, 'Por favor ingresa tu telefono');
+                isValid = false;
+            } else if (!isValidContactPhone(telefono.value)) {
+                showContactError(telefono, 'Ingresa un telefono valido (10 digitos)');
+                isValid = false;
+            }
+
+            if (!asunto.value) {
+                showContactError(asunto, 'Selecciona un asunto');
+                isValid = false;
+            }
+
+            if (!mensaje.value.trim()) {
+                showContactError(mensaje, 'Por favor ingresa tu mensaje');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Construir mensaje para WhatsApp
+                const whatsappNumber = '5215512345678'; // Numero de WhatsApp de la empresa
+                const asuntoText = asunto.options[asunto.selectedIndex].text;
+
+                let whatsappMessage = `*Contacto desde GUPRI Web*\n\n`;
+                whatsappMessage += `*Nombre:* ${nombre.value}\n`;
+                whatsappMessage += `*Telefono:* ${telefono.value}\n`;
+                if (email.value.trim()) {
+                    whatsappMessage += `*Email:* ${email.value}\n`;
+                }
+                whatsappMessage += `*Asunto:* ${asuntoText}\n`;
+                whatsappMessage += `*Mensaje:* ${mensaje.value}`;
+
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                // Abrir WhatsApp
+                window.open(whatsappUrl, '_blank');
+
+                // Mostrar mensaje de exito
+                showContactSuccess();
+
+                // Resetear formulario
+                contactForm.reset();
+            }
+        });
+
+        function isValidContactPhone(phone) {
+            const cleaned = phone.replace(/\D/g, '');
+            return cleaned.length >= 10;
+        }
+
+        function showContactError(field, message) {
+            const formGroup = field.closest('.form-group');
+            if (formGroup) {
+                formGroup.classList.add('error');
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                formGroup.appendChild(errorDiv);
+            }
+        }
+
+        function clearContactErrors() {
+            contactForm.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('error');
+                const errorMsg = group.querySelector('.error-message');
+                if (errorMsg) errorMsg.remove();
+            });
+
+            // Remover mensaje de exito si existe
+            const successMsg = contactForm.parentNode.querySelector('.form-success');
+            if (successMsg) successMsg.remove();
+        }
+
+        function showContactSuccess() {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'form-success';
+            successDiv.innerHTML = `
+                <div class="success-icon">✓</div>
+                <h3>Mensaje enviado</h3>
+                <p>Te hemos redirigido a WhatsApp para completar el envio.</p>
+            `;
+
+            contactForm.parentNode.insertBefore(successDiv, contactForm);
+            contactForm.style.display = 'none';
+
+            // Restaurar formulario despues de un tiempo
+            setTimeout(() => {
+                successDiv.remove();
+                contactForm.style.display = '';
+            }, 5000);
+        }
+    }
+
+    // ===================================
     // Boton scroll to top
     // ===================================
     function initScrollToTop() {
@@ -354,6 +476,7 @@
         initStickyHeader();
         initSmoothScroll();
         initCotizacionForm();
+        initContactForm();
         initPhoneFormatting();
         initActiveLinks();
         initScrollToTop();

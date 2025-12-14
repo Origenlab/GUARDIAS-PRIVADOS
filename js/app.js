@@ -469,6 +469,27 @@
     }
 
     // ===================================
+    // Dropdown menu mobile
+    // ===================================
+    function initMobileDropdown() {
+        const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+
+            if (toggle) {
+                toggle.addEventListener('click', function(e) {
+                    // Solo prevenir en mobile cuando el menu esta activo
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('open');
+                    }
+                });
+            }
+        });
+    }
+
+    // ===================================
     // Inicializacion
     // ===================================
     function init() {
@@ -480,6 +501,7 @@
         initPhoneFormatting();
         initActiveLinks();
         initScrollToTop();
+        initMobileDropdown();
     }
 
     // Ejecutar cuando el DOM este listo

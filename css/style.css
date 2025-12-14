@@ -385,6 +385,84 @@ h4 { font-size: var(--font-size-lg); }
   border-bottom: 1px solid var(--gray-100);
 }
 
+/* Navigation Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav-dropdown-toggle svg {
+  width: 12px;
+  height: 12px;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2) 0;
+  z-index: 1000;
+  border: 1px solid var(--gray-200);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--gray-50);
+  color: var(--primary);
+}
+
+.nav-dropdown-menu .dropdown-featured {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.nav-dropdown-menu .dropdown-featured:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Mobile dropdown */
+.nav-menu.active .nav-dropdown-menu {
+  position: static;
+  box-shadow: none;
+  border: none;
+  padding-left: var(--space-4);
+  display: none;
+  background: var(--gray-50);
+  border-radius: 0;
+}
+
+.nav-menu.active .nav-dropdown.open .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-menu.active .nav-dropdown-toggle {
+  justify-content: space-between;
+  width: 100%;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -1677,6 +1755,211 @@ h4 { font-size: var(--font-size-lg); }
    ============================================ */
 .scroll-to-top:hover {
   background: var(--primary-dark);
+}
+
+/* ============================================
+   PAGE HERO (Inner Pages)
+   ============================================ */
+.page-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.page-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .page-hero h1 {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+.page-hero .hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--gray-300);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* ============================================
+   SERVICE DETAIL SECTIONS
+   ============================================ */
+.service-detail {
+  padding: var(--space-16) 0;
+  background: var(--white);
+}
+
+.service-detail-alt {
+  background: var(--gray-50);
+}
+
+.service-detail-grid {
+  display: grid;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-detail-reverse .service-detail-image {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .service-detail-reverse .service-detail-image {
+    order: 2;
+  }
+
+  .service-detail-reverse .service-detail-content {
+    order: 1;
+  }
+}
+
+.service-detail-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--gray-100);
+  min-height: 300px;
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.service-detail-content .section-badge {
+  margin-bottom: var(--space-4);
+}
+
+.service-detail-content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.service-detail-content .lead {
+  font-size: var(--font-size-lg);
+  color: var(--gray-700);
+  margin-bottom: var(--space-4);
+}
+
+.service-detail-content p {
+  color: var(--gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.service-features {
+  margin-bottom: var(--space-8);
+}
+
+.service-features h4 {
+  font-size: var(--font-size-base);
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.service-list-detail {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .service-list-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-list-detail li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+}
+
+.service-list-detail li svg {
+  flex-shrink: 0;
+  color: var(--success);
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
+
+.breadcrumb a {
+  color: var(--gray-300);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--gray-400);
+}
+
+/* ============================================
+   SERVICES CTA
+   ============================================ */
+.services-cta {
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  text-align: center;
+}
+
+.services-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-cta h2 {
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.services-cta p {
+  color: var(--gray-300);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+}
+
+.services-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
 }
 
 /* ============================================
